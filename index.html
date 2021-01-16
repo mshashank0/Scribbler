@@ -33,7 +33,7 @@
         <!-- Header ends-->
         <div id="post-button-container">
             <button onclick="showPosts()" class="post-button" type="button">All posts</button>
-            <button onclick="createPost()" class="post-button" type="button">Create post</button>
+            <button onclick="showCreatePostModal()" class="post-button" type="button">Create post</button>
         </div>
     </div>
     <!-- Home page ends-->
@@ -85,8 +85,30 @@
     </div>
     <!-- Sign-up modal ends -->
 
+    <!-- Create post modal begins -->
+    <div class="modal" id="create-post-modal">
+
+        <div class="post-modal-content">
+
+            <div class="modal-head">
+                <span onclick="hideCreatePostModal()" id="close" class="close">&times;</span>
+                <h2 class="modal-title">Pen your post</h2>
+            </div>
+            <form id=create-post-form>
+                <label for="tile" class="label-text">Title</label>
+                <input type="text" id="title" placeholder="Enter title of your post" required>
+                <label for="content" class="label-text">Contents</label>
+                <textarea cols="50" rows="15" name="post-details" form="create-post-form" placeholder="Enter the contents of your post"></textarea>
+                <button type="submit" class="create-btn">Create</button>
+            </form>
+        </div>
+    </div>
+    <!-- Create post modal ends -->
+
     <!-- Add javascript code for header part-->
     <script src="scripts/common.js"></script>
+    <!-- Add javascript code for posts part-->
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>
