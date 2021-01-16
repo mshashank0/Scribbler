@@ -112,3 +112,11 @@ input {
 .bottom-banner {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.signup {
+    color: blue;
+    font-weight: bolder;
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
