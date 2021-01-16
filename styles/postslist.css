@@ -1,0 +1,158 @@
+body {
+    background-color: #ffeedd;
+    background-size: cover;
+    height: 100%;
+}
+
+.post {
+    border-radius: 15px;
+    background: #fff;
+    height: 150px;
+    display: flex;
+    flex-direction: wrap;
+    margin: 10px;
+    width: 500px;
+    transition: box-shadow .3s;
+}
+
+.post:hover {
+    box-shadow: 0 0 5px 5px rgba(33, 33, 33, .2);
+}
+
+.post-left {
+    width: 18%;
+    display: table-cell;
+    font-weight: bold;
+    padding: 50px 0px;
+    text-align: center;
+    color: #000;
+    overflow: auto;
+}
+
+.post-content {
+    width: 100%;
+    display: table-cell;
+    text-align: left;
+    background-color: #E8E8E8;
+    color: #000000;
+    border-radius: 0 15px 15px 0;
+    padding: 2px;
+}
+
+.post-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: gray;
+    font-size: 15px;
+    height: 25px;
+    overflow: auto;
+    padding: 5px 5px 5px 15px;
+}
+
+.post-more {
+    float: right;
+    cursor: pointer;
+    font-size: 17px;
+    color: grey;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+
+.post-desc {
+    height: 85px;
+    margin-bottom: 0 !important;
+    overflow: hidden;
+    padding: 5px 5px 5px 15px;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    max-height: 4.3em;
+    line-height: 1.4em;
+}
+
+.posts-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.post-trash {
+    cursor: pointer;
+    float: right;
+    padding: 4px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    color: grey;
+    font-size: 17px;
+}
+
+
+/* The Modal (background) */
+
+.trash-modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content/Box */
+
+.trash-modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #fefefe;
+    padding: 0px 15px 0px 15px;
+    margin: 10% auto;
+    border: 1px solid #888;
+    width: 20%;
+    height: 120px;
+    min-width: 320px;
+    text-align: center;
+}
+
+.trash-buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.trash-modal-button-no {
+    background-color: red;
+    border: none;
+    color: white;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.trash-modal-button-yes {
+    background-color: green;
+    border: none;
+    color: white;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
