@@ -3,10 +3,14 @@ function removeCard(card) {
     delCard.parentNode.removeChild(delCard);
 }
 
-function openPost(author, heading, content) {
-    const url = `../html/post.html?heading=${encodeURIComponent(heading.innerText)}&author=${encodeURIComponent(
-            author.innerText
-    )}&content=${encodeURIComponent(content.innerText)}`;
+function openPost(id) {
+    var post = document.getElementById(id);
+    var title = post.getElementsByClassName('post-title')[0];
+    var username = post.getElementsByClassName('post-username')[0];
+    var desc = post.getElementsByClassName('post-desc')[0];
+    const url = `../html/post.html?heading=${encodeURIComponent(title.innerText)}&author=${encodeURIComponent(
+        username.innerText
+    )}&content=${encodeURIComponent(desc.innerText)}`;
     window.location.href = url;
 }
 

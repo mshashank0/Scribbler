@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style></style>
+    <!-- Font awesome css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Montez font css -->
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet" />
+    <!-- Ubuntu Mono font css -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet" />
+    <!-- Bootstrap min cc -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <!-- other -->
+    <link href='../styles/post.css' rel='stylesheet' type='text/css'>
+    <link href='../styles/common.css' rel='stylesheet' type='text/css'>
+    </style>
+</head>
+
+<body>
+    <div id="main-container post-header">
+        <!-- Header begins-->
+        <div id="header">
+            <div id="title-container">
+                <p id="page-title">ScriBBler</p>
+                <p id="sub-heading">Explore, Imagine, Create</p>
+            </div>
+
+            <div id="auth-container">
+                <button type="button" class="auth-button" id="sign-in-button" onclick="showSignInModal();">Sign In</button>
+                <button type="button" class="auth-button" id="sign-up-button" onclick="showSignUpModal();">Sign Up</button>
+            </div>
+        </div>
+        <!-- Header ends-->
+
+        <!-- Sign-in modal begins -->
+        <div id="signin-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-head">
+                    <span onclick="hideSignInModal()" id="close">&times;</span>
+                    <h2 class="modal-title">Welcome Back!</h2>
+                </div>
+                <hr>
+                <form>
+                    <label for="username" class="label-text">Username</label>
+                    <input type="text" id="username" placeholder="Enter Username" required>
+                    <label for="password" class="label-text">Password</label>
+                    <input type="password" id="password" placeholder="Enter Password" required>
+                    <button type="submit" onclick="signin(username, password)" class="signin-btn">Sign In</button>
+                </form>
+
+                <p class=bottom-banner>Not a member?<span onclick="hideSignInModal();showSignUpModal();" class=signup>Sign
+                Up</span></p>
+            </div>
+        </div>
+        <!-- Sign-in modal ends -->
+
+        <!-- Sign-up modal begins -->
+        <div class="modal" id="signup-modal">
+            <div class="modal-content">
+
+                <div class="modal-head">
+                    <span onclick="hideSignUpModal()" id="close" class="close">&times;</span>
+                    <h2 class="modal-title">Get Started</h2>
+                </div>
+                <hr>
+                <form>
+                    <label for="fullname" class="label-text">Full name</label>
+                    <input type="text" id="fullname" placeholder="Enter Full Name" required>
+                    <label for="username" class="label-text">Username</label>
+                    <input type="text" id="username" placeholder="Enter Username" required>
+                    <label for="password" class="label-text">Password</label>
+                    <input type="password" id="password" placeholder="Enter Password" required>
+                    <label for="confirmpassword" class="label-text">Confirm Password</label>
+                    <input type="password" id="confirm_password" placeholder="Confirm Password" required>
+                    <button type="submit" onclick="signup(firstName,lastName, email, password, mobile)" class="signin-btn">Sign up</button>
+                </form>
+            </div>
+        </div>
+        <!-- Sign-up modal ends -->
+    </div>
+
+    <!-- Post container begins -->
+    <div class="post container">
+        <div class="heading-content" id="edit-heading" contenteditable="true"></div>
+        <div class="author">
+            <div class="author-name"></div>
+            <div>
+                <button id="edit-button" type="button" class="btn btn-danger" onclick="onEdit()">Edit<i
+                            class="fa fa-edit" style="padding-left: 5px;"></i></button>
+            </div>
+        </div>
+
+        <div class="post-content" id="edit-contenttext" contenteditable="true">
+        </div>
+
+        <button id="like-button" type="button" class="btn btn-danger" onclick="countLikes()"><i
+                    class="fa fa-thumbs-up"></i><span id="likeButton">Like</span></button>
+        <div id="show-count">Be the first one to like this</div>
+
+        <textarea id="comment" rows="4" cols="135" placeholder="Leave a comment..." name="comment"></textarea>
+        <div><button id="comment-button" type="button" class="btn btn-danger" onclick="addComment(comment)">Comment</button></div>
+        <div id="all-comments-heading">All Comments</div>
+        <div class="comment-container">
+            <div id="comments">
+            </div>
+        </div>
+        <!-- Post container ends -->
+    </div>
+
+    <script src="../scripts/post.js"></script>
+    <script src="../scripts/common.js"></script>
+</body>
+
+</html>

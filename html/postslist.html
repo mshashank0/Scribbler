@@ -79,6 +79,7 @@
         </div>
         <!-- Sign-up modal ends -->
 
+        <!-- post container starts here -->
         <div class="posts-container">
             <!-- post 1 starts here -->
             <div class="post" id="card1">
@@ -93,10 +94,10 @@
                     </div>
 
                     <p class="post-title">let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
-                    <p class="post-desc">ince JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
+                    <p class="post-desc">Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
 
                     <!-- Add ... icon -->
-                    <div class="post-more" onclick="navigateToPost()">
+                    <div class="post-more" onclick="openPost('card1')">
                         <i class="fa fa-ellipsis-h"></i>
                     </div>
 
@@ -132,7 +133,7 @@
                     <p class="post-desc">One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</p>
 
                     <!-- Add ... icon -->
-                    <div class="post-more" onclick="navigateToPost()">
+                    <div class="post-more" onclick="openPost('card2')">
                         <i class="fa fa-ellipsis-h"></i>
                     </div>
 
@@ -168,7 +169,7 @@
                     <p class="post-desc">If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
 
                     <!-- Add ... icon -->
-                    <div class="post-more" onclick="navigateToPost()">
+                    <div class="post-more" onclick="openPost('card3')">
                         <i class="fa fa-ellipsis-h"></i>
                     </div>
 
@@ -205,7 +206,7 @@
                         which leads to confusion when discussing the code.</p>
 
                     <!-- Add ... icon -->
-                    <div class="post-more" onclick="navigateToPost()">
+                    <div class="post-more" onclick="openPost('card4')">
                         <i class="fa fa-ellipsis-h"></i>
                     </div>
 
@@ -242,7 +243,7 @@
                         named xyz.</p>
 
                     <!-- Add ... icon -->
-                    <div class="post-more" onclick="navigateToPost()">
+                    <div class="post-more" onclick="openPost('card5')">
                         <i class="fa fa-ellipsis-h"></i>
                     </div>
 
@@ -263,6 +264,7 @@
             <!-- post 5 ends here -->
 
         </div>
+        <!-- post container ends here -->
     </div>
     <script src="../scripts/postslists.js"></script>
     <script src="../scripts/common.js"></script>
