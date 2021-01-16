@@ -1,30 +1,21 @@
-/* Code for Trash Modal */
-var trashFunctions = function(numberOfPosts) {
-
-    for (var i = 0; i < numberOfPosts; i++) {
-        // Get the trash modal
-        var modal = document.getElementsByClassName('trash-modal')[i];
-
-        // Get the div that opens the modal
-        var div = document.getElementsByClassName("post-trash")[i];
-
-        // Get the <span> element that closes the modal
-        var close = document.getElementsByClassName("trash-modal-button-no")[i];
-
-        // When the user clicks on the trash icon, open the modal 
-        div.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on `No` button, close the modal
-        close.onclick = function() {
-            modal.style.display = "none";
-        }
-    }
+function removeCard(card) {
+    const delCard = document.getElementById(card);
+    delCard.parentNode.removeChild(delCard);
 }
 
-trashFunctions(5)
+function openPost(author, heading, content) {
+    const url = `../html/post.html?heading=${encodeURIComponent(heading.innerText)}&author=${encodeURIComponent(
+            author.innerText
+    )}&content=${encodeURIComponent(content.innerText)}`;
+    window.location.href = url;
+}
 
-function navigateToPost() {
-    location.href = "post.html";
+function openTrashModal(id) {
+    var modal = document.getElementById(id);
+    modal.style.display = "flex";
+}
+
+function closeTrashModal(id) {
+    var modal = document.getElementById(id);
+    modal.style.display = "none";
 }

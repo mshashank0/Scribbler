@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: wrap;
     margin: 10px;
-    width: 500px;
+    width: 40%;
     transition: box-shadow .3s;
 }
 
@@ -20,7 +20,8 @@ body {
 }
 
 .post-left {
-    width: 18%;
+    min-width: 70px;
+    max-width: 17%;
     display: table-cell;
     font-weight: bold;
     padding: 50px 0px;
