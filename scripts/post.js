@@ -23,3 +23,67 @@ window.onload = function() {
     }
     document.getElementById('comments').style.visibility = 'hidden';
 };
+
+function onEdit() {
+    num += 1;
+    if (!editMode) {
+        document.getElementById('edit-heading').style.borderWidth = '2px';
+        document.getElementById('edit-heading').style.borderStyle = 'solid';
+        document.getElementById('edit-heading').style.borderColor = 'pink';
+
+        document.getElementById('edit-contenttext').style.borderWidth = '2px';
+        document.getElementById('edit-contenttext').style.borderStyle = 'solid';
+        document.getElementById('edit-contenttext').style.borderColor = 'pink';
+
+        document.getElementById('edit-button').innerHTML =
+            'Save<i class="fa fa-save" id="edit-button-icon"></i></button>';
+        editMode = true;
+    } else {
+        if (num === 2) {
+            var temp = document.getElementById('edit-heading');
+            document.getElementById('edit-heading').innerHTML = `<span>UPDATED:</span>${temp.innerHTML}`;
+
+            var temp = document.getElementById('edit-contenttext');
+            document.getElementById('edit-contenttext').innerHTML = `<div>UPDATED:</div>${temp.innerHTML}`;
+        }
+
+        document.getElementById('edit-contenttext').style.border = 'none';
+        document.getElementById('edit-heading').style.border = 'none';
+
+        document.getElementById('edit-button').innerHTML =
+            'Edit<i class="fa fa-edit" id="edit-button-icon"></i>';
+        document.getElementById('edit-button').disabled = true;
+    }
+}
+
+let count = 0;
+
+function countLikes() {
+    count = parseInt(count) + parseInt(1);
+    const divData = document.getElementById('show-count');
+    const likeButton = document.getElementById('like-button');
+    likeButton.innerHTML = 'Liked';
+    if (count == 1) {
+        divData.innerHTML = `${count} person likes this!`;
+    } else {
+        divData.innerHTML = `${count} people like this!`;
+    }
+}
+
+const comments = [];
+
+function addingComment(item, index) {
+    const temp = document.getElementById('comments').innerHTML;
+    document.getElementById('comments').innerHTML = `<div class="comment">${item}</div>`;
+    document.getElementById('comments').innerHTML += `${temp}</br>`;
+    comments.pop();
+}
+
+function addComment(comment) {
+    if (comment.value !== '') {
+        document.getElementById('comments').style.visibility = 'visible';
+        var comment = comment.value;
+        comments.unshift(comment);
+        comments.forEach(addingComment);
+    }
+}

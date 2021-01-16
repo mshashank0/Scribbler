@@ -27,10 +27,16 @@ body {
     width: 50%;
 }
 
+#edit-button-icon {
+    padding-left: 4px;
+}
+
+.pink-color {
+    background-color: #EE2553;
+}
+
 #comments {
     background-color: lightgrey;
-    width: 100%;
-    margin: 10px;
     padding: 10px;
 }
 
@@ -43,9 +49,9 @@ body {
 #edit-button {
     margin-left: 500px;
     float: right;
-    height: 40px;
-    width: 100px;
-    padding: 5px;
+    height: 32px;
+    width: 80px;
+    padding: 3px;
     border-radius: 2px;
 }
 
@@ -57,17 +63,17 @@ body {
 #like-button {
     margin-top: 20px;
     margin-bottom: 10px;
-    height: 40px;
-    width: 100px;
-    padding: 5px;
+    height: 32px;
+    width: 80px;
+    padding: 3px;
     border-radius: 2px;
 }
 
 #comment-button {
     margin-top: 20px;
     margin-bottom: 20px;
-    height: 40px;
-    width: 120px;
+    height: 32px;
+    width: 100px;
     padding: 5px;
     border-radius: 2px;
 }

@@ -92,7 +92,7 @@ input {
 .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
+    padding: 15px;
     border: 1px solid #888;
     width: 40%;
 }
@@ -126,6 +126,8 @@ input {
 
 .bottom-banner {
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .signup {
