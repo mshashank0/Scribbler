@@ -75,7 +75,7 @@ const comments = [];
 function addingComment(item, index) {
     const temp = document.getElementById('comments').innerHTML;
     document.getElementById('comments').innerHTML = `<div class="comment">${item}</div>`;
-    document.getElementById('comments').innerHTML += `${temp}</br>`;
+    document.getElementById('comments').innerHTML += `${temp}`;
     comments.pop();
 }
 
