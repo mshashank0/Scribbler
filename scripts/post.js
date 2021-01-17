@@ -2,6 +2,7 @@ const queryString = new Array();
 let editMode = false;
 let num = 0;
 
+//On loading the window, get the passed values - author name, title and description
 window.onload = function() {
     if (queryString.length == 0) {
         if (window.location.search.split('?').length > 1) {
@@ -24,6 +25,7 @@ window.onload = function() {
     document.getElementById('comments').style.visibility = 'hidden';
 };
 
+//On editing post, update the values
 function onEdit() {
     num += 1;
     if (!editMode) {
@@ -58,11 +60,12 @@ function onEdit() {
 
 let count = 0;
 
+//Update likes
 function countLikes() {
     count = parseInt(count) + parseInt(1);
     const divData = document.getElementById('show-count');
     const likeButton = document.getElementById('like-button');
-    likeButton.innerHTML = 'Liked';
+    likeButton.innerHTML = 'Liked!';
     if (count == 1) {
         divData.innerHTML = `${count} person likes this!`;
     } else {
@@ -72,6 +75,7 @@ function countLikes() {
 
 const comments = [];
 
+//Add comment div
 function addingComment(item, index) {
     const temp = document.getElementById('comments').innerHTML;
     document.getElementById('comments').innerHTML = `<div class="comment">${item}</div>`;
@@ -79,6 +83,7 @@ function addingComment(item, index) {
     comments.pop();
 }
 
+//Make comments div visible
 function addComment(comment) {
     if (comment.value !== '') {
         document.getElementById('comments').style.visibility = 'visible';
