@@ -3,7 +3,7 @@ let editMode = false;
 let num = 0;
 
 //On loading the window, get the passed values - author name, title and description
-window.onload = function() {
+var populateValue = function() {
     if (queryString.length == 0) {
         if (window.location.search.split('?').length > 1) {
             const params = window.location.search.split('?')[1].split('&');
@@ -23,7 +23,7 @@ window.onload = function() {
         document.getElementsByClassName('post-content')[0].innerHTML = content;
     }
     document.getElementById('comments').style.visibility = 'hidden';
-};
+}();
 
 //On editing post, update the values
 function onEdit() {
