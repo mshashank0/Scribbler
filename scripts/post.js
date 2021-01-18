@@ -2,7 +2,7 @@ const queryString = new Array();
 let editMode = false;
 let num = 0;
 
-//On loading the window, get the passed values - author name, title and description
+//On loading the window this method get exceuted automatically, get the passed values - author name, title and description
 var populateValue = function() {
     if (queryString.length == 0) {
         if (window.location.search.split('?').length > 1) {
