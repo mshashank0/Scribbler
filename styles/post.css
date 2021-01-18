@@ -8,6 +8,10 @@ body {
     height: 200%;
 }
 
+#post-container {
+    margin-top: 70px;
+}
+
 .heading-content {
     text-align: center;
     font-size: 25px;
