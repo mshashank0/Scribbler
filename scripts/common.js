@@ -1,3 +1,5 @@
+// Common header HTML template for all the pages. 
+// It includes header, signup and sign in modals
 var header = `
 <!-- Header begins-->
         <div id="header">
@@ -60,12 +62,13 @@ var header = `
     </div>
     <!-- Sign-up modal ends -->
 `
-
+    //It will add common header and modal template to main-container div's inner html
 function addHeader() {
     var headerContainer = document.getElementById("main-container");
     headerContainer.innerHTML = header;
 }
 
+//Add header method gets executed on windows load
 window.onload = addHeader;
 
 function showSignInModal() {
